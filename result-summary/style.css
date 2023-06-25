@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root{
+    --light_red: hsl(0, 100%, 67%);
+    --orangey_yellow: hsl(39, 100%, 56%);
+    --green_teal: hsl(166, 100%, 37%);
+    --cobalt_blue: hsl(234, 85%, 45%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    display: flex;
+}
+
+/*BLUE BOX */
+
+.container .blue-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width:100%;
+    max-width: 300px;
+    text-align: center;
+    background: linear-gradient(-145deg,  #7857ff 0%, #2e2be9 100%);
+    color: hsl(241, 100%, 89%);
+    padding: 20px 50px 50px;
+}
+
+.blue-box span {
+    margin: 15px 0;
+}
+
+/* circle */
+.blue-box .circle {
+    background: linear-gradient(#4e21ca 0%, #2421c900 100%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 5px 0;
+}
+
+.circle span {
+    display: block;
+    margin: 0;
+}
+
+.circle .max-number {
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: 800;
+    color: hsl(0, 0%, 100%);
+}
+
+.circle .min-number {
+    font-size: 0.75em;
+    opacity: 0.5;
+}
+
+/* BLUE BOX INFO */
+
+.blue-box .content-box {
+    max-width: 190px;
+}
+
+.content-box h1 {
+    margin:  15px 0;
+    color: hsl(0, 0%, 100%);
+}
+.content-box p {
+    font-size: 0.75em;
+}
+
+.blue-box, .container-summary {
+    border-radius: 20px;
+}
+
+
+/* SUMMARY SECTION */
+
+.container .container-summary {
+    position: absolute;
+    top: 0;
+    right: -160px;
+    z-index: 1;
+    width: 300px;
+    padding: 45px 35px 45px 65px;
+    -webkit-box-shadow: 10px 10px 24px 4px rgba(235,241,255,1);
+    -moz-box-shadow: 10px 10px 24px 4px rgba(235,241,255,1);
+    box-shadow: 10px 10px 24px 4px rgba(235,241,255,1);
+   
+}
+
+.container-summary .summary-content {
+    width: 100%;
+}
+.summary-content .summary-title {
+    margin-bottom: 20px;
+}
+
+.summary-content .summary-title, b {
+    color: rgb(10, 9, 55);
+}
+
+/* summary table */
+.summary-content .summary-table  {    
+    padding: 8px 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 0.80em;
+}
+
+.summary-table ul  {
+    display: flex;
+    justify-content: space-between;
+    color: hsla(224, 30%, 27%, 0.572);
+    margin-bottom: 1em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.summary-table ul:nth-child(1) {
+    color: var(--light_red);
+    background:  hsla(0, 100%, 67%, 0.075);
+}
+
+.summary-table ul:nth-child(2) {
+    color: var(--orangey_yellow);
+    background: hsla(39, 100%, 56%, 0.098);
+}
+.summary-table ul:nth-child(3) {
+    color: var(--green_teal);
+    background:  hsl(221, 100%, 96%);
+}
+.summary-table ul:nth-child(4) {
+    color: var(--cobalt_blue);
+    background: hsl(241, 100%, 89%);
+}
+
+.summary-table ul li:first-of-type + li {
+    color: hsla(224, 30%, 27%, 0.572);
+}
+
+.summary-table ul li,  b {
+   font-size: 0.95em;
+}
+
+/* btn */
+.summary-content  button {
+    text-align: center;
+    font-size: 0.75em;
+    color:  hsl(0, 0%, 100%);
+    border: 0;
+    width: 100%;
+    background: hsl(224, 30%, 27%);
+    padding: 10px 5px;
+    border-radius: 25px;
+}
+
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍  */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* responsive */
+
+
+@media only screen and (max-width: 375px) { 
+    .container {
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        margin-left: -100px;
+        display: flex;
+    }
+
+    .container .blue-box {
+        width:100%;
+        max-width: 300px;
+        max-height: 300px;
+        padding: 10px 10px 40px 20px;
+    }
+    
+    .blue-box span {
+        margin: 15px;
+    }
+    
+    /* circle */
+    .blue-box .circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .circle .max-number {
+        margin-top: 20px;
+        font-size: 2.2em;
+        font-weight: 700;
+    }
+    .circle .min-number {
+        margin-top: -10px;
+    }
+   
+    /* BLUE BOX INFO */
+    .blue-box .content-box {
+        min-width: 250px;
+    }
+
+    .content-box h1 {
+        margin:  10px 0;
+    }
+   
+   /* Summary */
+
+   .container .container-summary {
+    top: 270px;
+    left: 0;
+    z-index: 1;
+    padding: 45px 30px 25px 30px;
+   
+}
+
+.attribution { 
+    display: none;
+    
+}
+    
+  }
