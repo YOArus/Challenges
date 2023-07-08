@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    /* Primary */
+    --soft_blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --very_dark_blue:hsl(217, 54%, 11%);    /*main BG*/
+    --pale_dark_blue: hsl(216, 50%, 16%);    /*card BG*/
+    --lighter_dark_blue: hsl(215, 32%, 27%);  /*line*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    font-size: 18px;
+    background: var(--very_dark_blue);
+    display: grid;
+    place-items: center;
+    color: var(--soft_blue);
+}
+
+.cripto-card {
+    width: 300px;
+    background: var(--pale_dark_blue);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* card-imagen-style */
+.cripto-card .card-img {
+    max-width:275px;
+    position: relative;
+}
+
+.card-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* overlay-img */
+.card-img .middle {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsl(180, 100%, 50%, 0.5);
+    border-radius: 8px;
+}
+  
+.middle i {
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    top: 40%;
+    left: 42%; 
+}
+
+.card-img:hover img {
+    opacity: 0.9;
+}
+  
+.card-img:hover .middle {
+    opacity: 1;
+}
+
+  
+/* card-content-style */
+.cripto-card .card-content {
+    margin-top: 10px;
+}
+
+/* text */
+.card-content .card-text {
+    margin-bottom: 10px;
+}
+
+.card-text .card-title {
+    line-height: 2.5em;
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.card-text .card-description {
+    font-size: 15px;
+}
+
+/* data */
+.card-content .card-data {
+    border-bottom: 2px solid var(--lighter_dark_blue);
+    padding-bottom: 8px;
+}
+
+.card-data ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.card-data ul li  {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-data ul li span  {
+    font-size: 0.75em;
+}
+
+.card-data ul li:nth-child(1) span {
+    color: var(--cyan);
+    font-weight: 400;
+}
+
+/* card-footer-style */
+.card-content .card-footer  {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.card-footer .card-avatar  {
+    width: 30px;
+    height: 30px;
+}
+
+.card-avatar  img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+.card-footer  p {
+    font-size: 0.8em;
+}
+
+.card-footer  span {
+    color: #fff;
+}
+
+
+/* card-active-hover-style */
+.cripto-card .card-img, .card-text .card-title, .card-footer  span {
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+}
+.card-text .card-title:hover, .card-footer  span:hover {
+    color: var(--cyan);
+}
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍  */
+.attribution { font-size: 12px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:375px) {
+    .attribution  {
+        display: none;
+    }
+}
