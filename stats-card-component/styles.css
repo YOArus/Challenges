@@ -92,10 +92,9 @@ main {
 
 /* responsive */
 
-@media (min-width:1200px) {
+@media (min-width:725px) {
     main {
         width: 1110px;
-        height: 448px;
         display: flex;
         flex-direction: row-reverse;
         margin: 178px auto;
