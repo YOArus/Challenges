@@ -63,7 +63,7 @@ main {
 .section-2 .paragraph {
     color: var(--slightly-transparent-white);
     font-size: 1em;
-    height: 115px;
+    height: 150px;
 }
 
 .section-2 .stats {
@@ -118,6 +118,8 @@ main {
 
     .section-2 .paragraph {
         margin-right: 70px;
+        height: 110px;
+
     }
 
     .section-2 .stats {
