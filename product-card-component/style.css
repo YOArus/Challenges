@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+
+:root {
+    /* Primary */
+    --dark_cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* Neutral */
+    --very_dark_blue: hsl(212, 21%, 14%);
+    --dark_grayish_blue: hsl(228, 12%, 48%);
+    /* font */
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  'Fraunces', serif;
+    font-weight: 500;
+    font-size: .88rem;
+    color: var(--dark_grayish_blue);
+    background-color: var(--cream);
+    display: grid;
+    place-items: center;
+    /* min-height: 100vh; */
+    margin: 1rem;
+    line-height: 1.7;
+    height: 100%;
+}
+
+span, p, h1 {
+    overflow-wrap: break-word;
+}
+
+h1 {
+    line-height: 1;
+}
+
+.product {
+/* 
+    para crear variables modificables dentro de
+    las clases sin recurrir al root */
+
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 600px;
+}
+
+@media (min-width:600px) {
+    .product {
+        margin: 60px auto;
+        grid-template-columns: 1fr 1fr;
+        height: 450px;
+    }
+}
+
+.product__img img {
+    width: 100%;
+}
+
+
+.product__content {
+    /* estas variables pueden llamarse en otras clases */
+    padding: var(--content-padding);
+    display: grid;
+    gap: var(--content-spacing);
+}
+
+.product__category {
+    font-size: .81rem;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product__title  {
+    font-size: 2rem;
+    color:var(--very_dark_blue);
+}
+
+.product__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product__price {
+    font-size: 2rem;
+    color: var(--dark_cyan);
+}
+
+.product__original-price {
+    text-decoration: line-through;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--dark_cyan);
+    color: #fff;
+    font-weight: 700;
+    font-size: .9rem;
+    padding: .75em 1.5em;
+    border: 0;
+    border-radius: .5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn:hover {
+    background-color: hsl(158, 36%, 20%); 
+}
+
+.attribution {
+    margin: 10px 0;
+}
+.attribution a {
+    color: var(--dark_cyan);
+}
+
+
+
+
+
+
+
