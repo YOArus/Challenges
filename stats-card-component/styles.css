@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+:root {
+    /* #Primary */
+    --very-dark-blue: hsl(233, 47%, 7%);     
+    --dark-desaturated-blue: hsl(244, 38%, 16%);  
+    --soft-violet: hsl(277, 64%, 61%);  
+    
+/* #Neutral */
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: grid;
+    place-items: center;
+    line-height: 1.7;
+    background-color: var(--very-dark-blue);
+    color: var(--white);
+}
+
+main {
+    height: 850px;
+    width: 328px;
+    margin: 88px auto;
+    border-radius: 5px;
+    background-color: var(--dark-desaturated-blue);
+    overflow: hidden;
+}
+
+/* section-1 */
+
+.section .section-img {
+    background-image: url('/images/image-header-mobile.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+}
+
+.section-img .layer {
+    background-color: rgba(72,6,112,.7);
+    height: 100%;
+    width: 100%;
+}
+
+/* ---section-2 */
+.section-2 {
+    padding: 40px 33px;
+    text-align: center;
+}
+
+.section-2 .heading  {
+    font-size: 1.8em;
+    /* height: 115px;  */
+
+}
+
+.section-2 .heading span {
+    color: var(--soft-violet);  
+}
+.section-2 .paragraph {
+    color: var(--slightly-transparent-white);
+    font-size: 1em;
+    height: 115px;
+}
+
+.section-2 .stats {
+    line-height: 1.5;
+}
+
+.stats .stats-details .data {
+    font-weight: 700;
+    font-size: 1.54em;
+    color: var(--white);
+}
+
+.section-2 .stats-details .description  {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-bottom: 33px;
+    color: var(--slightly-transparent-white);
+}
+
+
+/* attribution */
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color:var(--soft-violet); }
+
+/* responsive */
+
+@media (min-width:1200px) {
+    main {
+        width: 1110px;
+        height: 448px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 178px auto;
+     }
+
+    .section .section-img {
+        width: 540px;
+        height: 100%;
+        background-image: url('images/image-header-desktop.jpg');
+     }
+
+    .section-2 {
+        padding: 25px 70px;
+        text-align: left;
+     }
+
+    .section-2 .heading {
+        font-size: 2.5em;
+    }
+
+    .section-2 .paragraph {
+        margin-right: 70px;
+    }
+
+    .section-2 .stats {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 70px;
+    }
+
+}
+
+
