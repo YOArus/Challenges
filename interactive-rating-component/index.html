@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body>
+<main class="main-container">
+  <section class="rating-card">
+  <div class="rating-card__logo">
+    <img src="images/icon-star.svg" alt="icon-start">
+  </div>
+
+  <h1 class="rating-card__title" id="title">How did we do?</h1>
+  <p class="rating-card__paragraph" id="paragraph">
+    Please let us know how we did with your support request. All feedback is appreciated 
+    to help us improve our offering!
+  </p>
+
+  <!-- Rating state number -->
+  <div class="rating-card__numbers" id="rate-number">
+    <button class="rating-card__number">1</button>
+    <button class="rating-card__number">2</button>
+    <button class="rating-card__number">3</button>
+    <button class="rating-card__number">4</button>
+    <button class="rating-card__number">5</button>
+  </div>
+  
+  <!-- Rating state btn --> 
+  <input type="submit" value="Submit" id="submit"></input>
+  </section>
+
+  <section class="thank-you-card__active">
+    <picture class="thank-you-card__img">
+      <img src="images/illustration-thank-you.svg" alt="ilustration-img">
+    </picture>
+    <h1 class="thank-you-card__title">Thank you!</h1>
+    <div class="thank-you-card__rating">You selected <span class="thank-you-card__number"></span> out of 5.</div>  
+    <p class="thank-you-card__paragraph">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don't hesitate to get in touch.
+    </p>
+
+  
+  </section>
+</main>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yoa</a>
+</div>
+
+<script src="codigo.js"></script>
+
+</body>
+</html>
