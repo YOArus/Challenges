@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* ### Primary */
+    --tomato: #ff6257;
+
+    /* ### Neutral */
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--charcoal-grey);
+    font-weight: 400;
+}
+
+.main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+}
+
+/** **************Sign Up form start ****************/
+.signup-start {
+    display: flex;
+    flex-direction: column;
+}
+
+/**IMG**/
+.signup-start__img img {
+    width: 100%;
+    height: 100%;
+}
+
+/**CONTENT**/
+.signup-start__content {
+    padding: 10px;
+    line-height: 1.8;
+} 
+
+/**HEADINGS**/
+.signup-start__heading, .signup-end__heading {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+    color: var(--dark-slate-grey);
+    font-weight: 700;
+}
+
+/**PARAGRAPH**/
+.signup-start__paragraph, .signup-end__paragraph {
+    margin-bottom: 1em; 
+} 
+
+/**FEATURES*/
+.signup-start__features li {
+    display: flex;
+    list-style-type: none;
+    min-width: 300px;
+}
+
+.signup-start__features li img {
+    align-self: baseline;
+}
+
+.signup-start__features span {
+    margin-left: 1em;
+}
+
+/**FORM*/
+.signup-start__form  {
+    position: relative;
+    margin-top: 30px;
+}
+
+/**LABEL*/
+.signup-start__form .labels {
+    display: flex;
+    justify-content: space-between;
+}
+.signup-start__form .label  {
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--dark-slate-grey);
+}
+
+/**FOCUS-ERROR*/
+.focus {
+    visibility: none;
+    font-size: .75rem;
+    font-weight: 600;
+    color:  #f07870;
+    outline: 0.5px solid #ff6257;
+    background-color: #ffe9e7f4;
+}
+
+/*****INPUT & BTN****/
+.signup-start__form input, .signup-end__btn  {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid hsl(231, 7%, 80%);
+    cursor: pointer;
+}
+
+/***PLACEHOLDER****/
+::placeholder {
+    color: var(--grey);
+  }
+
+/* **ERROR MESSAGE** */
+#message {
+    font-weight: 600;
+    margin-left: 8em;
+    color: var(--tomato);
+    font-size: 0.75rem;
+}
+
+/***SUBMIT BTN****/
+input[type="submit"], .signup-end__btn[type="submit"]  {
+    border: none;
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: 700;
+}
+
+input[type="submit"]:hover, .signup-end__btn[type="submit"]:hover  {
+    background-color: var(--tomato);
+    -webkit-box-shadow: -1px 19px 41px -9px rgba(255,98,87,0.75);
+    -moz-box-shadow: -1px 19px 41px -9px rgba(255,98,87,0.75);
+    box-shadow: -1px 19px 41px -9px rgba(255,98,87,0.75);
+    
+}
+
+/***MIX STYLE****/
+.signup-start, .signup-end {
+    width: 100%;
+    max-width: 325px;
+    padding: 0 10px;
+    background-color: var(--white);
+}
+
+
+/*************** Signup-end form card *************/
+.signup-end {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/****SE HEADING***/
+
+.signup-end__heading {
+    margin: 1em 0 0.6em 0;
+}
+/****SE PARAGRAPH***/
+
+.signup-end__paragraph {
+    font-size: 0.95em;
+    line-height: 1.5;
+}h
+
+.signup-end__paragraph strong {
+   font-weight: 700;
+   color: var(--dark-slate-grey);
+}
+
+/****SE DISMISS BTN***/
+
+.signup-end__btn {
+    margin-top: 15em;
+}
+
+/*** ATTRIBUTION **/
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution { 
+    visibility: hidden;
+    font-size: 12px; 
+    text-align: center; 
+    color: var(--white);
+}
+.attribution a { color: var(--tomato) }
+
+@media (min-width:700px) {
+    body {
+        background-color: var(--dark-slate-grey);
+    }
+    .signup-start {
+        flex-direction: row-reverse;
+        max-height: 550px;
+        min-width: 775px;
+        padding: 20px;
+    }
+
+    .signup-start__content {
+        padding: 2em 2.5em 0.5em 2em;
+    }
+     
+    .signup-start, .signup-end {
+        border-radius: 2rem;
+    }
+
+    /* *******SIGNUP END******** */
+    .signup-end {
+        min-width: 450px;
+        max-height: 470px;
+        padding: 2.80rem 3rem 2rem 3.75rem;
+    }
+
+    .signup-end__heading {
+        margin: 0.55em 0 0.35em 0;
+        font-size: 3.3rem;
+        max-width: 300px;
+    }
+    
+    .signup-end__paragraph {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .signup-end__btn {
+        margin-top: 1rem;
+    }
+    .attribution {
+        visibility:visible;
+    }
+}
