@@ -50,13 +50,15 @@ h2, h3 {
 
 .header-page h2 {
     font-weight: 200;
-    font-size: 34px;
 }
 
 .header-page h3 {
-    font-size: 34px;
     font-weight: 600;
     margin-bottom: 15px;
+}
+
+.header-page h2, .header-page h3 {
+    font-size: 24px;
 }
 
 /*********** FEATURES ***********/
@@ -117,6 +119,10 @@ h2, h3 {
 @media (min-width:600px) {
     .main-container {
         width: 1200px;
+    }
+    
+     .header-page h2, .header-page h3 {
+        font-size: 34px;
     }
 
     .header-page p {
