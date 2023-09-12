@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap');
+
+:root {    
+/* ### Primary */
+--red: hsl(0, 78%, 62%);
+--cyan: hsl(180, 62%, 55%);
+--orange: hsl(34, 97%, 64%);
+--blue: hsl(212, 86%, 64%);
+
+/* ### Neutral */
+--varyDark-blue: hsl(234, 12%, 34%);
+--grayish-blue: hsl(229, 6%, 66%);
+--veryLight-gray: hsl(0, 0%, 98%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    background-color: var(--veryLight-gray);
+}
+ 
+
+h1, h2, h3 {
+    color: var(--varyDark-blue);
+}
+
+.main-container {
+    width: 350px;
+    color: var(--grayish-blue);
+    line-height: 1.7;
+}
+
+/********** HEADER **************/
+.header-page {
+    margin-top: 2.5rem;
+    padding: 20px;
+    height: 240px;
+    text-align: center;
+}
+
+.header-page h1 {
+    font-size: 1.40rem;
+    font-weight: 200;
+}
+
+.header-page h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.45rem;
+}
+
+/*********** FEATURES ***********/
+.features-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.features {
+    text-align: left;
+    background-color:#fff;
+    padding: 2.07rem;
+    border-radius: 6px;
+    margin: 10px 8px;
+    height: 250px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.features:nth-child(1) {
+    border-top:4px solid var(--cyan);
+}
+.features:nth-child(3) {
+    border-top: 4px solid var(--blue);
+}
+
+.features p {
+    font-size: 0.85rem;
+    margin-bottom: 40px;
+}
+.features h3 {
+    margin-bottom: 10px;
+}
+
+.features img {
+    float: right;
+}
+
+/*********** F.GROUPS ***********/
+.fgroups div:nth-child(1) {
+    border-top: 4px solid var(--red); 
+    margin-bottom: 25px;
+}
+
+.fgroups div:nth-child(2) {
+    border-top: 4px solid var(--orange); 
+}
+/* attribution */
+.attribution { 
+    margin-top: 2rem;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { color: var(--blue)}
+
+
+@media (min-width:600px) {
+    .main-container {
+        width: 1200px;
+    }
+
+    .header-page p {
+        margin: 0 auto;
+        width: 500px;
+    }
+
+    .features-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+  .features {
+        width: 350px;
+        height: 250px;
+    }
+
+}
