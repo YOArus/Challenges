@@ -30,7 +30,7 @@ body {
 }
  
 
-h1, h2, h3 {
+h2, h3 {
     color: var(--varyDark-blue);
 }
 
@@ -48,15 +48,15 @@ h1, h2, h3 {
     text-align: center;
 }
 
-.header-page h1 {
-    font-size: 1.40rem;
+.header-page h2 {
     font-weight: 200;
+    font-size: 34px;
 }
 
-.header-page h2 {
+.header-page h3 {
+    font-size: 34px;
     font-weight: 600;
     margin-bottom: 15px;
-    font-size: 1.45rem;
 }
 
 /*********** FEATURES ***********/
